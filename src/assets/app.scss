@@ -1,0 +1,113 @@
+a[target='_blank']:after {
+  content: '\1F5D7'
+}
+
+/*
+  Hides Sitecore Experience Editor markup,
+  if you run the app in connected mode while the Sitecore cookies
+  are set to edit mode.
+*/
+.scChromeData, .scpm { display: none !important; }
+
+body {
+    padding-bottom: 200px;
+}
+.grid-4 {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0px 15px;
+}
+
+.grid-5 {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 0px 15px;
+}
+
+.living-situtations {
+    padding: 60px 0px;
+    width: 100%;
+    max-width: 1170px;
+    margin: 0px auto;
+
+    h2.title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .situation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        background: #eee;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        text-align: center;
+
+        &:hover {
+            background: #ddd;
+        }
+        &.active {
+            background: purple;
+            color: #FFF;
+        }
+    }
+}
+
+.property-address {
+    padding: 60px 0px;
+
+    h2.title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .address-picker {
+        width: 100%;
+        max-width: 600px;
+        margin: 0px auto;
+
+        input[type=text] {
+            border: 0px;
+            border-bottom: 1px solid #ccc;
+            width: 100%;
+            color: purple;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 15px 15px;
+        }
+    }
+}
+
+.plan-services {
+    padding: 60px 0px;
+
+    h2.title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .service {
+        background: #eee;
+        border-radius: 10px;
+        text-align: center;
+        padding: 15px 30px;
+        cursor: pointer;
+
+        &:hover {
+            background: #ddd;
+        }
+        &.active {
+            background: purple;
+            color: #FFF;
+        }
+
+        h4 {
+            font-size: 16px;
+            margin: 0px;
+        }
+    }
+}
